@@ -1,156 +1,183 @@
-# Atika — Information Security Portfolio
+# Atika — Computer Science Portfolio
 
-A static, multi-page personal portfolio built with plain HTML, CSS, and
-JavaScript (no framework, no backend) for the Web Technologies Assignment 01
-brief (BS CS F24 — Faculty of Information and Technology).
+A static, multi-page personal portfolio website developed using **HTML, CSS, and JavaScript** for the Web Technologies Assignment 01 (BS CS F24 — Faculty of Information and Technology).
 
-## Folder structure
+This project focuses on creating a clean, responsive, and interactive user interface using only front-end technologies. No backend, database, or frameworks are used.
+
+---
+
+# Project Overview
+
+This portfolio website represents my academic background, technical skills, projects, and contact information through a modern technology-inspired design.
+
+The website follows a cybersecurity-themed visual style while representing my journey as a **Computer Science student at Punjab University College of Information Technology (PUCIT), Lahore**.
+
+The main objectives of this project are:
+
+- Creating a responsive multi-page website
+- Implementing semantic HTML structure
+- Designing a consistent UI using CSS
+- Adding meaningful JavaScript interactions
+- Organizing code using proper Git workflow
+
+---
+
+# Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript (Vanilla JS)
+
+No external frameworks, backend technologies, or databases are used.
+
+---
+
+# Website Structure
+
+The website contains five properly linked pages:
+
+| Page | Purpose |
+|------|---------|
+| `index.html` | Home page with introduction, highlights, and navigation |
+| `about.html` | Personal background and educational information |
+| `skills.html` | Technical skills and expertise areas |
+| `portfolio.html` | Project showcase with interactive carousel |
+| `contact.html` | Contact form, FAQ section, and contact details |
+
+---
+
+# Folder Structure
 
 ```
 atika-security-portfolio/
-├── index.html          Home
-├── about.html           About
-├── skills.html          Skills (Services/Products equivalent)
-├── portfolio.html       Gallery / Portfolio
-├── contact.html         Contact
+
+├── index.html              Home Page
+├── about.html              About Page
+├── skills.html             Skills Page
+├── portfolio.html          Portfolio Page
+├── contact.html             Contact Page
+
 ├── css/
-│   └── style.css        Single shared stylesheet
+│   └── style.css           Main stylesheet
+
 ├── js/
-│   └── main.js           All interactivity
-└── images/               (empty — the design uses inline SVG instead of photos)
+│   └── main.js             JavaScript functionality
+
+└── images/
+    ├── cyber-defense.jpeg
+    └── security-overview.webp
 ```
 
-## Running it locally
+---
 
-No build step or server is required — just open `index.html` in a browser.
-For a closer-to-production feel (so relative paths and the map iframe behave
-exactly as they would when deployed), you can also serve it locally:
+# Features Implemented
+
+The website includes the following interactive and design features:
+
+- Responsive navigation menu with hamburger toggle for smaller screens
+- Active navigation link highlighting
+- Interactive portfolio carousel with:
+  - Next and previous buttons
+  - Dot navigation
+  - Automatic slide movement
+- Skills section with dynamic tab switching
+- Contact form validation using JavaScript
+- FAQ accordion section
+- Back-to-top scrolling button
+- Responsive layouts for desktop, tablet, and mobile devices
+
+---
+
+# JavaScript Functionality
+
+All JavaScript functionality is implemented using Vanilla JavaScript inside:
 
 ```
-cd atika-security-portfolio
-python3 -m http.server 8000
+js/main.js
 ```
 
-Then visit `http://localhost:8000`.
+The main interactive components include:
 
-## The five pages
+- Navigation toggle functionality
+- Active page detection
+- Portfolio carousel controls
+- Skills tab switching
+- Contact form validation
+- FAQ accordion behavior
+- Back-to-top button functionality
 
-| Page | Purpose |
-|---|---|
-| `index.html` | Hero introduction, highlight stats, focus-area summary |
-| `about.html` | Education timeline, background, two focus areas |
-| `skills.html` | Tabbed skill list (Offensive Security / AI & LLM Security / Tools) |
-| `portfolio.html` | Project carousel — three real projects with details |
-| `contact.html` | Validated contact form, contact details, map, FAQ accordion |
+Each feature is organized into separate functions and initialized only when the required elements exist on the page.
 
-## JavaScript features (in `js/main.js`)
+---
 
-1. **Hamburger nav menu** — `initNavToggle()` — collapses the nav into a
-   toggleable menu under ~820px.
-2. **Active link highlighting** — `initActiveNavLink()` — compares the
-   current URL to each nav link and marks the match.
-3. **Project carousel** — `initCarousel()` — slides via `transform:
-   translateX(...)`, with dot navigation, arrow buttons, and auto-advance
-   that pauses on hover.
-4. **FAQ accordion** — `initAccordion()` — toggles `max-height` and
-   `aria-expanded` so only one answer is open at a time.
-5. **Skills tab switcher** — `initTabs()` — swaps which `.tab-panel` has the
-   `active` class based on the clicked button's `data-tab`.
-6. **Contact form validation** — `initContactForm()` — checks name length,
-   email format, and message length on submit, with inline error messages
-   and a status banner on success/failure.
-7. **Back-to-top button** — `initBackToTop()` — appears after scrolling and
-   smooth-scrolls to top on click.
+# Design Concept
 
-Each function starts with an early `return` if its markup isn't on the page,
-so `main.js` can be safely linked from every page without errors.
+The website follows a modern technology-inspired design approach.
 
-## Git & GitHub — branching workflow
+The design includes:
 
-Run this from inside the `atika-security-portfolio` folder.
+- Dark theme interface
+- Technical typography
+- Clean card-based layouts
+- Responsive grid structures
+- Security-inspired visual elements
+
+The visual style represents my interest in computer science, software development, and modern technologies.
+
+---
+
+# Running The Project
+
+No installation or build process is required.
+
+Simply open:
+
+```
+index.html
+```
+
+in any modern web browser.
+
+For running the project using a local server:
 
 ```bash
-git init
-git add .
-git commit -m "Initial commit: project structure and home page"
-
-# Create GitHub repo, then link it (replace the URL with your own repo)
-git branch -M main
-git remote add origin https://github.com/<your-username>/atika-security-portfolio.git
-git push -u origin main
+python -m http.server 8000
 ```
 
-Then build the rest of the site on feature branches and merge them in one at
-a time — this is what the assignment's "Version Control Requirements" is
-checking for:
+Then open:
 
-```bash
-git checkout -b feature-navbar
-# ...work on the nav / hamburger menu...
-git add .
-git commit -m "Add responsive nav bar with hamburger toggle"
-git checkout main
-git merge feature-navbar
-git push
-
-git checkout -b feature-about-page
-# ...build about.html...
-git commit -am "Add About page with education timeline"
-git checkout main
-git merge feature-about-page
-git push
-
-git checkout -b feature-portfolio-carousel
-# ...build portfolio.html + carousel JS...
-git commit -am "Add portfolio page with project carousel"
-git checkout main
-git merge feature-portfolio-carousel
-git push
-
-git checkout -b feature-contact-form
-# ...build contact.html + validation...
-git commit -am "Add contact page with form validation and FAQ accordion"
-git checkout main
-git merge feature-contact-form
-git push
+```
+http://localhost:8000
 ```
 
-Keep commit messages specific ("Add email regex validation to contact form",
-not "update code") — the instructor is explicitly checking commit history.
+---
 
-## Deploying with GitHub Pages (free, no server needed)
+# Git & Version Control
 
-1. Push the project to GitHub (steps above).
-2. On GitHub, open the repo → **Settings** → **Pages**.
-3. Under **Build and deployment → Source**, choose **Deploy from a branch**.
-4. Branch: `main`, folder: `/ (root)` → **Save**.
-5. GitHub gives you a live URL after a minute or two, typically:
-   `https://<your-username>.github.io/atika-security-portfolio/`
-6. Bring this link (and the repo open in a code editor) to the viva.
+The project was managed using Git with feature-based development.
 
-## Viva preparation checklist
+Branches created during development:
 
-Since this assignment is graded entirely through a live viva, be ready to:
+- `feature-navbar`
+- `feature-contact-form`
+- `feature-portfolio-carousel`
 
-- **Walk through the HTML structure** — explain why `<header>`, `<nav>`,
-  `<main>`, `<section>`, and `<footer>` were used instead of generic `<div>`s.
-- **Explain the CSS** — the `:root` custom properties (design tokens), the
-  `.hero-grid` / `.grid-3` Grid layouts, the `@media` breakpoints for
-  responsiveness, and how the hamburger menu's CSS (`max-height` transition)
-  works together with the JS that toggles its class.
-- **Explain the JavaScript, function by function** — especially
-  `addEventListener`, `classList.toggle`, and the way each `init...()`
-  function is scoped to one feature.
-- **Explain the form validation logic** — what `testFn` checks for each
-  field, what happens on valid vs. invalid submission, and why validation
-  re-runs on `input` events.
-- **Justify the design decisions** — the "case file / security report"
-  visual concept (navy background, amber "clearance stamp" accent, monospace
-  used only for reference-style labels) ties directly to the security theme
-  of the content.
-- **Be ready for small live edits** — e.g. adding a new skill list item, a
-  new FAQ question, or changing the carousel's auto-advance timing in
-  `main.js`.
+Each feature was developed separately and merged into the main branch after completion.
 
-Practice explaining every section before the viva — code you can't explain
-counts as not understood, regardless of how it looks.
+---
+
+# Author
+
+**Atika**
+
+Computer Science Student  
+Punjab University College of Information Technology (PUCIT), Lahore
+
+---
+
+# Assignment Information
+
+**Web Technologies Assignment 01**
+
+BS CS F24  
+Faculty of Information and Technology

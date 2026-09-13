@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Atika — Information Security Portfolio
+   Atika — Computer Science Portfolio
    main.js — all site interactivity, in plain DOM JavaScript (no framework).
    Each feature is self-contained so it only runs if its markup exists
    on the current page.
