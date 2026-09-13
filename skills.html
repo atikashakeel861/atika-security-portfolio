@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills — Atika</title>
+<meta name="description" content="Technical skills across offensive security, AI/LLM security, and research documentation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="brand">atika<span class="dot">.</span>sec</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="ref-tag">SKILLS</div>
+      <h1>What I work with.</h1>
+      <p class="lead">Skills grouped by area — switch between tabs to browse each one.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+
+      <div class="tabs" role="tablist">
+        <button class="tab-btn active" data-tab="tab-offensive" role="tab" aria-selected="true">Offensive Security</button>
+        <button class="tab-btn" data-tab="tab-ai" role="tab" aria-selected="false">AI &amp; LLM Security</button>
+        <button class="tab-btn" data-tab="tab-tools" role="tab" aria-selected="false">Tools &amp; Process</button>
+      </div>
+
+      <div id="tab-offensive" class="tab-panel active">
+        <ul class="skill-list">
+          <li><span class="tag">INJECTION</span>SQL Injection — identifying and exploiting unsanitised query parameters</li>
+          <li><span class="tag">CLIENT-SIDE</span>Cross-Site Scripting (XSS) — reflected, stored, and DOM-based variants</li>
+          <li><span class="tag">ACCESS CONTROL</span>Insecure Direct Object References (IDOR)</li>
+          <li><span class="tag">AUTH</span>JWT manipulation &amp; token tampering</li>
+          <li><span class="tag">DISCOVERY</span>Forced browsing &amp; hidden endpoint enumeration</li>
+          <li><span class="tag">METHOD</span>OWASP-style vulnerability assessment on live test targets</li>
+        </ul>
+      </div>
+
+      <div id="tab-ai" class="tab-panel">
+        <ul class="skill-list">
+          <li><span class="tag">MANIPULATION</span>Prompt injection techniques against LLM-backed applications</li>
+          <li><span class="tag">CTF</span>Practical experience from Prompt The Flag, LLM Password Game, and Prompt Airlines</li>
+          <li><span class="tag">EVALUATION</span>Probing guardrails and safety behaviour in conversational AI</li>
+          <li><span class="tag">ANALYSIS</span>Reading LLM behaviour for unintended or unsafe responses</li>
+        </ul>
+      </div>
+
+      <div id="tab-tools" class="tab-panel">
+        <ul class="skill-list">
+          <li><span class="tag">RESEARCH</span>Competitive &amp; market analysis (7-app comparative study)</li>
+          <li><span class="tag">DOCUMENTATION</span>Formal reporting — structured .docx and slide-deck deliverables</li>
+          <li><span class="tag">WEB DEV</span>HTML, CSS &amp; JavaScript for front-end interfaces</li>
+          <li><span class="tag">VERSION CONTROL</span>Git &amp; GitHub, feature-branch workflows</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-note">© 2026 Atika — Information Security, COMSATS Lahore</div>
+    <ul class="footer-links">
+      <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<button id="toTop" class="to-top" aria-label="Back to top">↑</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Atika</title>
+<meta name="description" content="Security and research projects by Atika: penetration testing, AI CTF challenges, and a competitive market analysis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="brand">atika<span class="dot">.</span>sec</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="ref-tag">PORTFOLIO</div>
+      <h1>Project files.</h1>
+      <p class="lead">Three pieces of work, each with a different shape — an offensive-security assessment, an AI red-teaming effort, and a market research deliverable. Use the arrows or dots to move between them.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+
+      <div class="carousel">
+        <div class="carousel-track-wrap">
+          <div class="carousel-track">
+
+            <div class="slide">
+              <div class="slide-visual">
+                <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="10" y="10" width="180" height="140" fill="none" stroke="var(--border)" stroke-width="2"/>
+                  <path d="M100 25 L155 45 V85 C155 115 130 135 100 145 C70 135 45 115 45 85 V45 Z" fill="none" stroke="var(--accent)" stroke-width="3"/>
+                  <path d="M80 88 L94 102 L124 68" fill="none" stroke="var(--teal)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="slide-body">
+                <div class="ref-tag">PROJECT FILE 01</div>
+                <h3>OWASP Juice Shop — Penetration Test</h3>
+                <p>An Information Security bonus assignment covering a full round of testing against an intentionally vulnerable web application.</p>
+                <ul>
+                  <li>SQL injection &amp; stored/reflected XSS</li>
+                  <li>Insecure Direct Object References (IDOR)</li>
+                  <li>JWT manipulation and forced browsing</li>
+                  <li>Findings documented in a formatted report</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="slide-visual">
+                <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="10" y="10" width="180" height="140" fill="none" stroke="var(--border)" stroke-width="2"/>
+                  <path d="M40 45 h95 a12 12 0 0 1 12 12 v38 a12 12 0 0 1 -12 12 H75 l-22 18 v-18 H40 a12 12 0 0 1 -12 -12 V57 a12 12 0 0 1 12 -12 Z" fill="none" stroke="var(--accent)" stroke-width="3"/>
+                  <text x="55" y="83" font-family="IBM Plex Mono, monospace" font-size="16" fill="var(--teal)">&lt;/&gt;</text>
+                </svg>
+              </div>
+              <div class="slide-body">
+                <div class="ref-tag">PROJECT FILE 02</div>
+                <h3>AI-Focused CTF Challenges</h3>
+                <p>Three capture-the-flag platforms built around large language models, exploring how far a crafted prompt can push a model off its intended behaviour.</p>
+                <ul>
+                  <li>Prompt The Flag</li>
+                  <li>LLM Password Game</li>
+                  <li>Prompt Airlines</li>
+                  <li>Focus: prompt injection &amp; guardrail evasion</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="slide-visual">
+                <svg viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="10" y="10" width="180" height="140" fill="none" stroke="var(--border)" stroke-width="2"/>
+                  <line x1="35" y1="125" x2="165" y2="125" stroke="var(--border)" stroke-width="2"/>
+                  <rect x="48" y="90" width="16" height="35" fill="var(--teal)"/>
+                  <rect x="76" y="65" width="16" height="60" fill="var(--accent)"/>
+                  <rect x="104" y="80" width="16" height="45" fill="var(--teal)"/>
+                  <rect x="132" y="50" width="16" height="75" fill="var(--accent)"/>
+                </svg>
+              </div>
+              <div class="slide-body">
+                <div class="ref-tag">PROJECT FILE 03</div>
+                <h3>Competitive Analysis — Deen App</h3>
+                <p>An internship deliverable researching an Islamic app against seven established competitors to surface positioning and feature gaps.</p>
+                <ul>
+                  <li>Benchmarked against Muslim Pro, Quran Majeed, Athan &amp; others</li>
+                  <li>Delivered as an 11-slide presentation</li>
+                  <li>Accompanied by a written prompts guide</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="carousel-controls">
+          <div class="carousel-dots"></div>
+          <div class="carousel-arrows">
+            <button class="carousel-arrow prev" aria-label="Previous project">‹</button>
+            <button class="carousel-arrow next" aria-label="Next project">›</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-note">© 2026 Atika — Information Security, COMSATS Lahore</div>
+    <ul class="footer-links">
+      <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<button id="toTop" class="to-top" aria-label="Back to top">↑</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>

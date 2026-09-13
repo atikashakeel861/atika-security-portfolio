@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Atika</title>
+<meta name="description" content="Get in touch with Atika — Information Security student at COMSATS University Islamabad, Lahore.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="brand">atika<span class="dot">.</span>sec</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="ref-tag">CONTACT</div>
+      <h1>Let's talk.</h1>
+      <p class="lead">Whether it's about an internship, a CTF, or a question about one of the projects above — the form below reaches me directly.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container form-grid">
+
+      <div>
+        <form id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" placeholder="Your name">
+            <div class="field-error"></div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email address</label>
+            <input type="text" id="email" name="email" placeholder="you@example.com">
+            <div class="field-error"></div>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="What would you like to say?"></textarea>
+            <div class="field-error"></div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send message</button>
+          <div id="formStatus" class="form-status" role="status"></div>
+        </form>
+      </div>
+
+      <div>
+        <ul class="contact-info-list">
+          <li><span class="k">EMAIL</span><span>atika.security@example.com</span></li>
+          <li><span class="k">LOCATION</span><span>Lahore, Punjab, Pakistan</span></li>
+          <li><span class="k">CAMPUS</span><span>COMSATS University Islamabad, Lahore</span></li>
+          <li><span class="k">STATUS</span><span>Open to internship &amp; CTF collaborations</span></li>
+        </ul>
+
+        <div class="map-frame">
+          <iframe
+            src="https://maps.google.com/maps?q=Lahore%2C%20Pakistan&t=&z=11&ie=UTF8&output=embed"
+            loading="lazy"
+            title="Map showing Lahore, Pakistan">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div class="ref-tag">FAQ</div>
+        <h2>Before you ask —</h2>
+      </div>
+
+      <div class="accordion">
+        <div class="acc-item">
+          <button class="acc-trigger" aria-expanded="false">
+            <span>Are you available for internships?</span>
+            <span class="plus">+</span>
+          </button>
+          <div class="acc-panel">
+            <p>Yes — I'm currently completing my first internship and I'm open to further opportunities, particularly in application security or AI safety research.</p>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-trigger" aria-expanded="false">
+            <span>What tools do you use for testing?</span>
+            <span class="plus">+</span>
+          </button>
+          <div class="acc-panel">
+            <p>My testing so far has been on deliberately vulnerable targets like OWASP Juice Shop, working through browser dev tools, manual request tampering, and structured CTF platforms for the AI-focused work.</p>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-trigger" aria-expanded="false">
+            <span>Can I see the source code for this site?</span>
+            <span class="plus">+</span>
+          </button>
+          <div class="acc-panel">
+            <p>Yes — the full project, including commit history and feature branches, is on GitHub. The link is in the footer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-note">© 2026 Atika — Information Security, COMSATS Lahore</div>
+    <ul class="footer-links">
+      <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<button id="toTop" class="to-top" aria-label="Back to top">↑</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
