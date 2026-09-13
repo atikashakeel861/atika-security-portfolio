@@ -155,6 +155,13 @@ function initContactForm() {
   if (!form) return;
 
   const status = document.getElementById('formStatus');
+    const messageInput = document.getElementById('message');
+  const charCount = document.getElementById('charCount');
+  if (messageInput && charCount) {
+    messageInput.addEventListener('input', () => {
+      charCount.textContent = `${messageInput.value.length} characters`;
+    });
+  }
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();

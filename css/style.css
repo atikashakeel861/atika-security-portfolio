@@ -486,6 +486,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .field input:focus, .field textarea:focus { border-color: var(--teal); }
 .field textarea { min-height: 130px; resize: vertical; }
+.char-count { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-top: 6px; }
 
 .field.has-error input,
 .field.has-error textarea { border-color: var(--danger); }
