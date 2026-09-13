@@ -370,6 +370,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    ========================================================================== */
 
 .carousel { position: relative; }
+.carousel:focus-visible { outline: 2px solid var(--teal); outline-offset: 4px; }
 .carousel-track-wrap { overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius); }
 .carousel-track { display: flex; transition: transform 0.4s ease; }
 

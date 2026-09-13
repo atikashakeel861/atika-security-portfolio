@@ -78,6 +78,7 @@ function initCarousel() {
     dotsWrap.querySelectorAll('.carousel-dot').forEach((dot, di) => {
       dot.classList.toggle('active', di === index);
     });
+
   }
 
   prevBtn.addEventListener('click', () => goTo(index - 1));
@@ -89,6 +90,13 @@ function initCarousel() {
   wrap.addEventListener('mouseenter', () => clearInterval(timer));
   wrap.addEventListener('mouseleave', () => {
     timer = setInterval(() => goTo(index + 1), 6000);
+  });
+  
+  // Keyboard support: left/right arrows move the carousel when it's focused
+  wrap.setAttribute('tabindex', '0');
+  wrap.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') goTo(index - 1);
+    if (e.key === 'ArrowRight') goTo(index + 1);
   });
 }
 
